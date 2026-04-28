@@ -70,12 +70,6 @@ const independent = {
     O: null
 }
 
-function findIndependentHelper(queue, lastLetter = "base") {
-    if (queue.size() == 0) return lastLetter;
-    if (queue.size() != 0 && lastLetter == null) return null;
-    return findIndependent(queue, independent[queue.dequeue()])
-}
-
 const iStateLabel = document.querySelector('[data-i-state]');
 const iShortBtn = document.querySelector('[data-i-short]');
 const iLongBtn = document.querySelector('[data-i-long]');
